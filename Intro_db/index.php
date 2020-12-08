@@ -16,6 +16,7 @@
 		echo "</tr>";
 		foreach($users as $user){
 		echo "<tr>";
+			echo "<td><img src='".$user["profile_pic"]."'></td>";
 			echo "<td>".$user["username"]."</td>";
 			echo  "<td>".$user["password"] . "</td>";
 			echo "<td>" .$user["user_type"]. "</td>";
