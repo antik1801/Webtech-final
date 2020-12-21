@@ -4,7 +4,7 @@
 		$db_username = "root";
 		$db_servername= "localhost";
 		$db_password= "";
-		$db_database ="";
+		$db_database ="demo_project";
 		
 		$conn = mysqli_connect($db_servername,$db_username,$db_password,$db_database);
 		if(!$conn)
@@ -18,7 +18,7 @@
 		$db_username = "root";
 		$db_servername= "localhost";
 		$db_password= "";
-		$db_database ="";
+		$db_database ="demo_project";
 		
 		$conn = mysqli_connect($db_servername,$db_username,$db_password,$db_database);
 		if(!$conn)
@@ -28,11 +28,11 @@
 		$result = mysqli_query($conn,$q);
 		$data = array();
 		
-		if($result && $mysqli_num_rows($result) > 0)
+		if($result && mysqli_num_rows($result) > 0)
 		{
 			while($result && $row = mysqli_fetch_assoc($result))
 			{
-				$data[] = $rows;
+				$data[] = $row;
 			}
 		}
 		return $data;

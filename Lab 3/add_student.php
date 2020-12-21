@@ -13,11 +13,6 @@
 					<span id= "err_name"></span>
 				</tr>
 				<tr>
-					<td>ID :</td>
-					<td><input type="text" id="id" name="id">
-					<span id= "err_id"></span>
-				</tr>
-				<tr>
 					<td>Credit:</td>
 					<td><input type="text" id="credit" name="credit">
 					<span id= "err_credit"></span>

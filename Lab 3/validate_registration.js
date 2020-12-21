@@ -81,5 +81,37 @@ function validate()
 				break;
 			}
 		}
-		`
+	if(cgpa=="")
+	{
+		err_cgpa.innerHTML = "*cgpa required";
+		has_error = true;
+	}
+	else
+		for(i=0; i<cgpa.length; i++)
+		{
+			if(!(cgpa[i]>= '0' && cgpa[i]<='9') && !(cgpa[i] == '.'))
+			{
+				err_cgpa.innerHTML="*Invalid CGPA";
+				has_error = true;
+				break;
+			}
+		}
+	if(did == "")
+	{
+		err_did.innerHTML="*Department ID required";
+		has_error = true;
+	}`
+	else
+		for(i=0; i<did.length; i++)
+	{
+		if(!(did[i]>='0' && did[i]<='9') && !(did[i]='-'))
+		{
+			err_did.innerHTML="*Invalid Formet of Department ID";
+			has_error = true;
+			break;
+		}
+		
+	}
+	return !has_error;
+		
 }

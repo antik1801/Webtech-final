@@ -15,10 +15,15 @@
 		updateStudent($_POST["id"],$id,$_POST["credit"],$_POST["cgpa"],$_POST["did"]);
 		header("Location:show_students.php");
 	}
+	if(isset($_POST["register"]))
+	{
+		addStudent($_POST["name"],$_POST["credit"],$_POST["cgpa"],$_POST["did"]);
+		header:"Location:dashboard.php";
+	}
 	function isUser($u, $p)
 	{
 		$p = md5($p);
-		$q = "select * from users where username='$u' and password='$p'"
+		$q = "select * from users where username='$u' and password='$p'";
 		$data = getResult($q);
 		if(count($data) > 0) return true;
 		else return false;
@@ -31,4 +36,12 @@
 	{
 		runQuery("delete from student where id='$id'");
 	}
- ?>
+	function getDepartmentData()
+	{
+		return getResult("select * from department");
+	}
+	function addStudent($name,$credit,$cgpa,$did)
+	{
+		runQuery("insert into student values('".$name."','".$credit."','".$cgpa."','".$did."')");
+	}
+?>

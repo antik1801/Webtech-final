@@ -83,13 +83,13 @@ function validate()
 	else
 	for(i=0; i<did.length; i++)
 	{
-		if(!(did[i]>='0' && did[i]<='9'))
+		if(!(did[i]>='0' && did[i]<='9') && !(did[i]=='-'))
 		{
 			err_did.innerHTML="Invalid Department ID";
 			has_error= true;
 			break;
 		}
 	}
-	return has_error;
+	return !has_error;
 }
 	
