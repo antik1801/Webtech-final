@@ -1,0 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+   background-image: url(job.jpg);
+   background-size: 100%;
+}
+.header {
+   position: absolute;
+   width: 100%;
+   height: 30%;
+   opacity: 0.5;
+   top: 0px;
+   background-color: black; 
+}
+.header h1 {
+   font-size: 80px;
+   margin-top: 30px;
+   right: 200px;
+   color: white;
+   text-align: center;
+}
+input {
+   margin-left: 20px;
+   padding: 3px 6px;
+   font-size: 20px;
+   border: 1px solid white;
+   background-color: black;
+   color: white;
+}
+.container {
+   margin-left: 110px;
+   padding-top: 300px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-column-gap: 5px;
+   grid-row-gap: 80px;
+}
+.container .job {
+   width: 600px;
+   height: 400px;
+   background-color: black;
+}
+.img1 {
+   width: 600px;
+   height: 400px;
+   background-image: url(job1.jpg);
+   background-size: 100%;
+}
+.img2 {
+   width: 600px;
+   height: 400px;
+   background-image: url(job2.jpg);
+   background-color: yellow;
+   background-size: 100%;
+}
+.img3 {
+   width: 600px;
+   height: 400px;
+   background-image: url(job3.jpg);
+   background-size: 100%;
+}
+.img4 {
+   width: 600px;
+   height: 400px;
+   background-image: url(job4.jpg);
+   background-size: 100%;
+}
